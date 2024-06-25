@@ -8,16 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="4.1.0" />
-    <PackageReference Include="NUnit.Allure" Version="1.2.1.1" />
+    <PackageReference Include="Allure.NUnit" Version="2.12.1" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
     <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.27.0" />
     <PackageReference Include="Selenium.Support" Version="4.21.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.21.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="126.0.6478.5500" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\TEST\TEST.csproj" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="125.0.6422.6000" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.34.0" />
   </ItemGroup>
 
 </Project>
