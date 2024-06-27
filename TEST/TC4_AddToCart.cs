@@ -41,19 +41,19 @@ namespace TEST
                 CartPage cartPage = new CartPage(driver);
                 string actualProduct = cartPage.GetProductInCartText();
                 string expectedProduct = "Blue Top";
-                Assert.AreEqual(expectedProduct, actualProduct);
+                Assert.That(expectedProduct.Equals(actualProduct));
 
                 string actualPrice = cartPage.GetPriceInCartText();
                 string expectedPrice = "Rs. 500";
-                Assert.AreEqual(expectedPrice, actualPrice);
+                Assert.That(expectedPrice.Equals(actualPrice));
 
                 string actualQuantity = cartPage.GetQuantityInCartText();
                 string expectedQuantity = "1";
-                Assert.AreEqual(expectedQuantity, actualQuantity);
+                Assert.That(expectedQuantity.Equals(actualQuantity));
 
                 string actualTotal = cartPage.GetTotalInCartText();
                 string expectedTotal= "Rs. 500";
-                Assert.AreEqual(expectedTotal, actualTotal);
+                Assert.That(expectedTotal.Equals(actualTotal));
             }
             catch (Exception ex)
             {

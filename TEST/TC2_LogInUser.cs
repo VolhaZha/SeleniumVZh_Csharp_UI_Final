@@ -28,7 +28,7 @@ namespace TEST
             signUpLogInPage.ClickLogIn(email, password);
 
             UserLoggedInPage userLoggedInPage = new UserLoggedInPage(driver);
-            Assert.IsTrue(userLoggedInPage.CheckThatLoggedInAsVisible());
+            Assert.That(userLoggedInPage.CheckThatLoggedInAsVisible());
 
            }
            catch (Exception ex)

@@ -5,6 +5,7 @@ using Allure.NUnit;
 using OpenQA.Selenium.Remote;
 using POM;
 using Allure.Net.Commons;
+using Allure.NUnit.Attributes;
 
 namespace TEST
 {
@@ -84,6 +85,7 @@ namespace TEST
             this.driver = driver;
         }
 
+        [AllureStep("Add data to report")]
         public void CaptureFailureDetails(Exception ex)
         {
             Screenshot screenshot = (driver as ITakesScreenshot).GetScreenshot();
@@ -93,10 +95,9 @@ namespace TEST
 
 /*            allure.AddTestAttachment("Failure Screenshot", "image/png", screenshotPath);
 
-            allure.addAttachment("Exception Details", "text/plain", ex.ToString());
+            allure.AddAttachment("Exception Details", "text/plain", ex.ToString());
 
-            AllureLifecycle.Instance.AddAttachment("DebugLog", "application/json", log, "json");*/
-
+            AllureLifecycle.AddAttachment("DebugLog", "application/json", log, "json");*/
         }
 
         /*        public string SaveScreen ()

@@ -34,7 +34,7 @@ namespace TEST
             productsPage.ClickSearch(Params.PRODUCT);
 
             ProductsPage productsPage2 = new ProductsPage(driver);
-            Assert.IsTrue(productsPage2.CheckThatProductVisible());
+            Assert.That(productsPage2.CheckThatProductVisible());
 
             }
             catch (Exception ex)

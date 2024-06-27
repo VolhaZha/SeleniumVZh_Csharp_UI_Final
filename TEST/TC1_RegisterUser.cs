@@ -31,7 +31,7 @@ namespace TEST
             signUpEnterAccountInfoPage.СreateAccount(password, firstname, lastname, address, state, city, zip, mobile);
 
             AccountCreatedPage accountCreatedPage = new AccountCreatedPage(driver);
-            Assert.IsTrue(accountCreatedPage.CheckThatAccountCreatedVisible());
+            Assert.That(accountCreatedPage.CheckThatAccountCreatedVisible());
 
             accountCreatedPage.ClickContinue();
 
