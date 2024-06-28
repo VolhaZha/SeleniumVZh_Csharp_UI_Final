@@ -1,11 +1,12 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+﻿using Allure.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 using OpenQA.Selenium.Firefox;
-using Allure.NUnit;
-using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Chrome;
+
+using OpenQA.Selenium;
 using POM;
-using Allure.Net.Commons;
-using Allure.NUnit.Attributes;
+using OpenQA.Selenium.Remote;
 
 namespace TEST
 {
@@ -93,32 +94,10 @@ namespace TEST
             string screenshotPath = Params.SCREEN_PATH;
             screenshot.SaveAsFile(screenshotPath);
 
-/*            allure.AddTestAttachment("Failure Screenshot", "image/png", screenshotPath);
+            allure.AddAttachment("Failure Screenshot", "image/png", screenshotPath);
 
             allure.AddAttachment("Exception Details", "text/plain", ex.ToString());
-
-            AllureLifecycle.AddAttachment("DebugLog", "application/json", log, "json");*/
         }
-
-        /*        public string SaveScreen ()
-                {
-                    Screenshot screenshot = (driver as ITakesScreenshot).GetScreenshot();
-
-                    string screenshotPath = Params.SCREEN_PATH;
-                    screenshot.SaveAsFile(screenshotPath);
-
-                    return screenshotPath;
-
-                }
-
-                public void CaptureFailureDetails(Exception ex)
-                {
-                    BaseTest baseTest = null;
-                    var screenshot = baseTest.SaveScreen();
-                    TestContext.AddTestAttachment(screenshot);
-                    AllureLifecycle.Instance.AddAttachment("Ending test", "image/png", SaveScreen);
-                }*/
-
 
         [TearDown]
         public void TearDown()

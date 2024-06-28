@@ -31,7 +31,7 @@ namespace TEST
                 userLoggedInPage.ClickProducts();
 
                 ProductsPage productsPage = new ProductsPage(driver);
-                productsPage.ScrollDown(3000);
+                productsPage.ScrollDown(500);
                 ProductsPage productsPage2 = new ProductsPage(driver);
                 productsPage2.AddToCart();
 
